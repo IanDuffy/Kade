@@ -599,6 +599,10 @@ opacity: 50%;
   margin-left: 0;
 }
 
+.article-cta-image {
+  aspect-ratio: 16 / 9!important;
+}
+
 .article--content h2:first-of-type~p {
   font-size: var(--font-size--17);
   line-height: var(--line-height--base);
