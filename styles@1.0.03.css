@@ -453,6 +453,13 @@ opacity: 50%;
     text-decoration: underline;
    }
 
+/* Form Styles */
+
+
+.form-block--wrap, .subscribe-aside {
+  opacity: 0;
+}
+
    .subscribe-aside.active {
   opacity: 1;
     }
@@ -465,6 +472,44 @@ opacity: 50%;
     .form-block--wrap {
        transition: opacity 175ms cubic-bezier(.45, 0, 0, 1) 350ms, margin 350ms cubic-bezier(.45, 0, 0, 1) 350ms;
     }
+
+  .text-field:not(:focus):placeholder-shown + .text-field--label {
+      transform: translateY(1.125em);
+      font-size: 1em;
+      right: 1em;
+      letter-spacing: var(--letter-spacing--base);
+    }
+
+    .text-field:focus, .w-select:focus, .text-field:not(:placeholder-shown):not(:invalid){
+    border-color: var(--color--primary);
+    }
+
+    input[type=email]:not(:focus):not(:placeholder-shown):invalid {
+      border-color: var(--color--error);
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        border-bottom: 1px solid var(--color--primary);
+        -webkit-text-fill-color: var(--color--on-secondary-container);
+        -webkit-box-shadow: 0 3px 10px rgb(0 0 0/0);
+        transition: background-color 5000s ease-in-out 0s
+    }
+
+    textarea {
+  resize: vertical; /* This allows resizing only vertically */
+ }
+
+ .hide-text {
+  visibility: hidden;
+ }
 
     /*FAQ*/
 
@@ -769,3 +814,4 @@ opacity: 50%;
 .article--content ol {
   padding-block: 1em;
 }
+
