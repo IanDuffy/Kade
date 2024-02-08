@@ -20,6 +20,11 @@
   text-rendering: optimizeLegibility;
   }
 
+  html [lang="ja"] {
+    --font--heading: var(--font--noto);
+    --font--body: var(--font--noto);
+  }
+
   [color-mode="dark"] {
   --color--primary: #C1C1FF;
   --color--on-primary: #1600A8;
